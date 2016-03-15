@@ -29,6 +29,9 @@ public class Biblioteka implements BibliotekaInterfejs {
 	@Override
 	public LinkedList<Knjiga> pronadjiKnjigu(Autor autor, long ISBN, String naslov, String izdavac) {
 		// TODO Auto-generated method stub
+		if(naslov==null){
+			return knjige;
+		}
 		LinkedList<Knjiga> rezultat = new LinkedList<>();
 		for (int i = 0; i < knjige.size(); i++) {
 			if(knjige.get(i).getNaslov().equals(naslov)){
